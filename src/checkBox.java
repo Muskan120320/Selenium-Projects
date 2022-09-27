@@ -14,9 +14,5 @@ public class checkBox {
         Thread.sleep(2000);
         driver.findElement(By.xpath("//*[@id=\"p_n_feature_seven_browse-bin/8561134031\"]/span/a/span")).click();
         Thread.sleep(2000);
-        # TODO:  to rewrite showing error fix it.
-       driver.findElement(By.xpath("//*[@id=\"p_n_feature_twenty-eight_browse-bin/9899961031\"]/span/a/span")).click();
-
-
     }
 }
