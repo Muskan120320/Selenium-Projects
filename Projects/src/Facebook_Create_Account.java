@@ -36,7 +36,7 @@ public class Facebook_Create_Account {
         Confirm_mail.sendKeys("manhasmuskan@gmail.com");
 
         WebElement Password=driver.findElement(By.id("password_step_input"));
-        Password.sendKeys("test");
+        Password.sendKeys("testingOk");
 
 
         WebElement day= driver.findElement(By.id("day"));
@@ -51,7 +51,9 @@ public class Facebook_Create_Account {
         Select New=new Select(Year);
         New.selectByVisibleText("2000");
 
-        driver.findElements(By.xpath("//label[text()='Female'"));
+        List<WebElement> gender=driver.findElements(By.name("sex"));
+        gender.get(0).click();
+
         driver.findElement(By.name("websubmit")).click();
 
         }
