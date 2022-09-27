@@ -40,7 +40,7 @@ public class Form {
             chk.click ();
             System.out.println("Facebook Persists Checkbox Status is -  "+chk.isSelected());
         }
-        driver.close();
+//        driver.close();
 
     }
 }
