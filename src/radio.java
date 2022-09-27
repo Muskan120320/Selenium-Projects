@@ -2,7 +2,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
 public class radio {
@@ -12,6 +15,11 @@ public class radio {
 
         driver.get("https://www.facebook.com/");
         driver.findElement(By.partialLinkText("Create")).click();
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(2000));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.className("_n3")));
+
 
         List<WebElement> gender=driver.findElements(By.name("sex"));
        int count =gender.size();
