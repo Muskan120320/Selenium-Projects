@@ -15,11 +15,6 @@ public class ForgotPassword {
         mail.sendKeys("muskanmanhas@gmail.com");
 
         driver.findElement(By.id("form_submit")).click();
-//        Thread.sleep(2000);
-
-//        driver.navigate().back();
-
-//        driver.findElement(By.linkText("Elemental Selenium")).click();
 
     }
 }
