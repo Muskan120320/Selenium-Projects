@@ -14,8 +14,7 @@ public class Frames {
         WebElement frame1= driver.findElement(By.id("frameElement"));
         driver.switchTo().frame(frame1);
         driver.findElement(By.xpath("/html/body/button")).click();
-//        driver.switchTo().parentFrame();
-        System.out.println(driver.getTitle());
+
 
     }
 }
