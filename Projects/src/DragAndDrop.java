@@ -4,20 +4,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class MouseHover {
+public class DragAndDrop {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\supremacy\\Downloads\\chromedriver_win32 (2)\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-
         driver.manage().window().maximize();
-        driver.get("https://www.ebay.com/");
-       WebElement element= driver.findElement(By.xpath("//body/div[@id='mainContent']/div[1]/ul[1]/li[3]/a[1]"));
+        driver.get("https://the-internet.herokuapp.com/drag_and_drop");
 
-       Actions action= new Actions(driver);
-       action.moveToElement(element).perform();
-       Thread.sleep(1500);
+        WebElement A= driver.findElement(By.xpath("//div[@id='column-a']"));
+        WebElement B = driver.findElement(By.xpath("//div[@id='column-b']"));
 
-        WebElement element1= driver.findElement(By.xpath("//body/div[@id='mainContent']/div[1]/ul[1]/li[4]/a[1]"));
-        action.moveToElement(element1).perform();
+        Actions act = new Actions(driver);
+//        act.dragAndDrop(A, B);
+        act.dragAndDrop(B, A);
+//        Thread.sleep(2000);
+        act.perform();
     }
 }
