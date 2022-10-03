@@ -14,10 +14,10 @@ public class DragAndDrop {
         WebElement A= driver.findElement(By.xpath("//div[@id='column-a']"));
         WebElement B = driver.findElement(By.xpath("//div[@id='column-b']"));
 
-        Actions act = new Actions(driver);
-//        act.dragAndDrop(A, B);
-        act.dragAndDrop(B, A);
+        Actions action = new Actions(driver);
+//        action.dragAndDrop(A, B);
+        action.dragAndDrop(B, A);
 //        Thread.sleep(2000);
-        act.perform();
+        action.perform();
     }
 }
