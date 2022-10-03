@@ -12,6 +12,6 @@ public class DropDownList {
         WebElement DROPDOWN= driver.findElement(By.id("dropdown"));
 
         Select D1=new Select(DROPDOWN);
-//        D1.selectByIndex(1);
+        D1.selectByIndex(1);
     }
 }
