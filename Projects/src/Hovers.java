@@ -11,16 +11,17 @@ public class Hovers {
         driver.manage().window().maximize();
         driver.get("https://the-internet.herokuapp.com/hovers");
 
-        WebElement element1= driver.findElement(By.xpath("//body/div[2]/div[1]/div[1]/div[1]/img[1]"));
+// TODO CHANGE TO RELATIVE PATH // changed
+        WebElement element1= driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[1]/img"));
         Actions action= new Actions(driver);
         action.moveToElement(element1).perform();
         Thread.sleep(1500);
 
-        WebElement element2= driver.findElement(By.xpath("//body/div[2]/div[1]/div[1]/div[2]/img[1]"));
+        WebElement element2= driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/img"));
         action.moveToElement(element2).perform();
         Thread.sleep(1500);
 
-        WebElement element3= driver.findElement(By.xpath("//body/div[2]/div[1]/div[1]/div[3]/img[1]"));
+        WebElement element3= driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[3]/img"));
         action.moveToElement(element3).perform();
 
     }

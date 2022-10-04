@@ -4,19 +4,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class DragDrop {
+public class Resize {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\supremacy\\Downloads\\chromedriver_win32 (2)\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://jqueryui.com/droppable/");
+        driver.get("https://jqueryui.com/resizable/");
 
         WebElement frame= driver.findElement( By.xpath("//*[@id=\"content\"]/iframe"));
         driver.switchTo().frame(frame);
-        WebElement drag= driver.findElement(By.id("draggable"));
-        WebElement drop= driver.findElement(By.id("droppable"));
 
-        Actions actions = new Actions(driver);
-        actions.dragAndDrop(drag,drop).perform();
+        WebElement element= driver.findElement(By.xpath("//*[@id=\"resizable\"]/div[3]"));
+
+        Actions action = new Actions(driver);
+        action.dragAndDropBy(element,300,100).perform();
     }
 }

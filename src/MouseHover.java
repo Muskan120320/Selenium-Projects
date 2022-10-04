@@ -11,13 +11,14 @@ public class MouseHover {
 
         driver.manage().window().maximize();
         driver.get("https://www.ebay.com/");
-       WebElement element= driver.findElement(By.xpath("//body/div[@id='mainContent']/div[1]/ul[1]/li[3]/a[1]"));
+        //TODO CHANGE XPATH// changed
+       WebElement element= driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div[1]/ul/li[3]"));
 
        Actions action= new Actions(driver);
        action.moveToElement(element).perform();
        Thread.sleep(1500);
 
-        WebElement element1= driver.findElement(By.xpath("//body/div[@id='mainContent']/div[1]/ul[1]/li[4]/a[1]"));
+        WebElement element1= driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div[1]/ul/li[4]/a"));
         action.moveToElement(element1).perform();
     }
 }
