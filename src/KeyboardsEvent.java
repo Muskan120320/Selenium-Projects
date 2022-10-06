@@ -12,7 +12,7 @@ public class KeyboardsEvent {
         driver.manage().window().maximize();
         driver.get("https://extendsclass.com/text-compare.html");
 
-      WebElement sourceTextArea =driver.findElement(By.xpath("//span[contains(text(),\"Your documents remain confidnetial and private\")]"));
+      WebElement sourceTextArea =driver.findElement(By.xpath("//span[contains(text(),\"Your documents remain confidential and private\")]"));
      Actions action= new Actions(driver);
         Thread.sleep(2000);
      action.keyDown(sourceTextArea, Keys.CONTROL).sendKeys("a").sendKeys("c").build().perform();
