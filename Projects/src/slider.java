@@ -15,7 +15,7 @@ public class slider {
 
         WebElement slider = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/input"));
         Actions action = new Actions(driver);
-        action.dragAndDropBy(slider,-20,125).perform();
+        action.dragAndDropBy(slider,100,125).perform();
         Thread.sleep(2000);
 
     }
