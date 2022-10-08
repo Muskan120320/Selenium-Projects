@@ -16,6 +16,5 @@ public class CapturingScreenshots {
 
      ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-
     }
 }
