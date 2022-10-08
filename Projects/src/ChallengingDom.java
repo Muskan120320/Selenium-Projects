@@ -17,7 +17,7 @@ public class ChallengingDom {
         Thread.sleep(2000);
 
         driver.findElement(By.xpath("//a[@id='0c6cea60-2834-013b-f0fd-1a84755cd8af']")).click();
-        Thread.sleep(2000);
+//        Thread.sleep(2000);
 
 
     }
