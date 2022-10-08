@@ -3,23 +3,24 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import javax.swing.plaf.TableHeaderUI;
 
-public class DragAndDrop {
+public class Frames {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver","C:\\Users\\p\\Downloads\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
         driver.manage().window().maximize();
-        driver.get("https://the-internet.herokuapp.com/drag_and_drop");
+        driver.get("https://the-internet.herokuapp.com/frames");
+        driver.findElement(By.linkText("iFrame")).click();
 
-        WebElement frame= driver.findElement( By.id("content"));
-        driver.switchTo();
-        WebElement A= driver.findElement(By.xpath("//div[@id='column-a']"));
-        WebElement B = driver.findElement(By.xpath("//div[@id='column-b']"));
+        driver.findElement(By.xpath("//span[contains(text(),'File')]")).click();
+        Thread.sleep(1500);
 
-        Actions action = new Actions(driver);
-        action.dragAndDrop(A, B);
-        Thread.sleep(2000);
-        action.perform();
+//        Actions action= new Actions(driver);
+//        action.moveToElement(element).click();
+        driver.findElement(By.xpath("//span[contains(text(),'Format')]")).click();
+
     }
+
 }
