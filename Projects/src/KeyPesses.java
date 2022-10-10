@@ -19,7 +19,12 @@ public class KeyPesses {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         WebElement textbox = driver.findElement(By.id("target"));
-        textbox.sendKeys(Keys.BACK_SPACE);
+        textbox.sendKeys(Keys.ENTER);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        driver.findElement(By.id("result")).isDisplayed();
+
+
 
 
     }
