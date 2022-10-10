@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class KeyPesses {
     public static void main(String[] args) throws InterruptedException {
@@ -15,13 +16,11 @@ public class KeyPesses {
 
         driver.manage().window().maximize();
         driver.get("https://the-internet.herokuapp.com/key_presses");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         WebElement textbox = driver.findElement(By.id("target"));
-        textbox.sendKeys(Keys.ENTER);
+        textbox.sendKeys(Keys.BACK_SPACE);
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(5000));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.id("target"))).click();
 
     }
 }
