@@ -16,7 +16,6 @@ public class Basic_Authentication {
 
         String password = "admin";
 
-
         String URL = "https://" +username +":" +password +"@"+ "the-internet.herokuapp.com/basic_auth";
         driver.get(URL);
 
